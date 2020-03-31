@@ -31,9 +31,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const post = {
-  title: "Title of a longer featured blog post",
+  title: "Main Feature",
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "This could be either some kind of news/informational, or something we want to draw people's attention to, this will be controlled from the manager app",
   image: "https://source.unsplash.com/random",
   imgText: "main image description",
   linkText: "Continue reading…"

@@ -1,16 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Toolbar, Typography } from "@material-ui/core";
+import { Button, Toolbar, Typography, AppBar } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
-  toolbar: {
+  header: {
     borderBottom: `1px solid ${theme.palette.divider}`
   },
   toolbarTitle: {
     flex: 1
   },
-  toolbarSecondary: {
+  centerToolbar: {
     justifyContent: "space-between",
     overflowX: "auto"
   },
@@ -22,11 +22,11 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const { sections, appName } = props;
+  const { appName } = props;
 
   return (
     <React.Fragment>
-      <Toolbar>
+      <Toolbar className={classes.header}>
         <Typography
           variant="h5"
           color="inherit"
@@ -38,21 +38,6 @@ export default function Header(props) {
         >
           {appName}
         </Typography>
-      </Toolbar>
-      <Toolbar className={classes.toolbarSecondary}>
-        {sections.map(section => (
-          <Button
-            color="primary"
-            noWrap
-            key={section.title}
-            variant="body2"
-            className={classes.toolbarLink}
-            component={RouterLink}
-            to={`/${section.title}`}
-          >
-            {section.title}
-          </Button>
-        ))}
       </Toolbar>
     </React.Fragment>
   );
