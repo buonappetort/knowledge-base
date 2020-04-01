@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({}));
 export default function Popular() {
   return (
     <div>
-      <Typography variant="h5">Top Reads</Typography>
+      <Typography variant="h5">Trending</Typography>
       <List>
         <ListItem>
           <Button
@@ -24,7 +24,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="Article 1" secondary="in Technology" />
+            <ListItemText primary="#eminem" />
           </Button>
         </ListItem>
         <ListItem>
@@ -34,7 +34,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="Article 2" secondary="in Design" />
+            <ListItemText primary="#postmalone" />
           </Button>
         </ListItem>
         <ListItem>
@@ -44,7 +44,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="Article 3" secondary="in Business" />
+            <ListItemText primary="#eltonjohn" />
           </Button>
         </ListItem>
         <ListItem>
@@ -54,7 +54,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="Article 4" secondary="in Technology" />
+            <ListItemText primary="#leonrussel" />
           </Button>
         </ListItem>
         <ListItem>
@@ -64,7 +64,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="Article 5" secondary="in Science" />
+            <ListItemText primary="#blacksabbath" />
           </Button>
         </ListItem>
       </List>

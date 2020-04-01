@@ -7,6 +7,7 @@ import Home from "./components/home";
 import Footer from "./components/footer";
 import CenterHomePage from "./components/centerhomepage";
 import ComponentHomePage from "./components/componenthomepage";
+import Article from "./components/article";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { makeStyles, CssBaseline, Container } from "@material-ui/core";
 import {
@@ -37,7 +38,8 @@ export default function App() {
           <main>
             <Switch>
               <Route exact path="/ia" children={<Home centers={centers} />} />
-              <Route path="/ia/:center" children={<CenterHomePage />} />
+              <Route exact path="/ia/:center" children={<CenterHomePage />} />
+              <Route path="/ia/articles/:center/:id" children={<Article />} />
               <Route
                 path="/component/:component"
                 children={<ComponentHomePage />}

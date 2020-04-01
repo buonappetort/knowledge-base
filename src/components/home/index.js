@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import FeaturedSection from "./featured";
+import FeaturedSection from "./mainfeatured";
 import Popular from "./popular";
-import RecentUploads from "./recent";
+import CenterFeatured from "./centerfeatured";
 import CenterToolbar from "../centerhomepage/centertoolbar";
 
 export default function Home(props) {
@@ -17,7 +17,7 @@ export default function Home(props) {
           <Popular />
         </Grid>
         <Grid item xs={12}>
-          <RecentUploads />
+          <CenterFeatured />
         </Grid>
       </Grid>
     </div>
