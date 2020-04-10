@@ -16,29 +16,29 @@ import {
   CardHeader,
   Paper,
   Avatar,
-  IconButton
+  IconButton,
 } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import { Link as RouterLink } from "react-router-dom";
 import "./centerfeatured.scss";
 import { red } from "@material-ui/core/colors";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {},
   media: {
     height: 0,
-    paddingTop: "56.25%" // 16:9
+    paddingTop: "56.25%", // 16:9
   },
   avatar: {
-    backgroundColor: red[500]
+    backgroundColor: red[500],
   },
   title: {
-    color: theme.palette.primary.light
+    color: theme.palette.primary.light,
   },
   titleBar: {
     background:
-      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)"
-  }
+      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+  },
 }));
 
 function FeaturedPanel(props) {
@@ -111,75 +111,75 @@ export default function CenterFeatured() {
       slides: [
         {
           id: 1,
-          name: "Prince Performs at Whitehouse",
+          name: "Article 1",
           center: "Center 1",
           date: "1/1/2020",
           author: "Anthony",
-          image: "https://source.unsplash.com/random"
+          image: "https://source.unsplash.com/random",
         },
         {
           id: 2,
-          name: "Mick Jagger Paints red door",
+          name: "Article 2",
           center: "Center 2",
           date: "2/1/2020",
           author: "Gary",
-          image: "https://source.unsplash.com/random"
+          image: "https://source.unsplash.com/random",
         },
         {
           id: 3,
-          name: "Miles Davis, was 'Born Cool'",
+          name: "Article 3",
           center: "Center 3",
           date: "1/16/2020",
           author: "Matt",
-          image: "https://source.unsplash.com/random"
+          image: "https://source.unsplash.com/random",
         },
         {
           id: 4,
-          name: "J Dilla opens Doughnut Shop",
+          name: "Article 4",
           center: "Center 3",
           date: "1/1/2020",
           author: "Ann",
-          image: "https://source.unsplash.com/random"
-        }
-      ]
+          image: "https://source.unsplash.com/random",
+        },
+      ],
     },
     {
       panel: 2,
       slides: [
         {
           id: 5,
-          name: "Kanye's favorite musician..Kanye",
+          name: "Article 5",
           center: "Center 2",
           date: "11/1/2019",
           author: "Ann",
-          image: "https://source.unsplash.com/random"
+          image: "https://source.unsplash.com/random",
         },
         {
           id: 6,
-          name: "Uncommon Common",
+          name: "Article 6",
           center: "Center 2",
           date: "12/1/2019",
           author: "Matt",
-          image: "https://source.unsplash.com/random"
+          image: "https://source.unsplash.com/random",
         },
         {
           id: 7,
-          name: "Training to Run DMC",
+          name: "Article 7",
           center: "Center 1",
           date: "1/1/2019",
           author: "Anthony",
-          image: "https://source.unsplash.com/random"
+          image: "https://source.unsplash.com/random",
         },
         {
           id: 8,
-          name: "Questlove's Quest for Love",
+          name: "Article 8",
           center: "Center 1",
           date: "1/1/2019",
           author: "Rick",
-          image: "https://source.unsplash.com/random"
-        }
-      ]
-    }
+          image: "https://source.unsplash.com/random",
+        },
+      ],
+    },
   ];
   return (
     <div className={classes.root}>

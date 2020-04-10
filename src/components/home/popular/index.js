@@ -6,11 +6,11 @@ import {
   ListItem,
   ListItemText,
   Typography,
-  ButtonBase as Button
+  ButtonBase as Button,
 } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 
-const useStyles = makeStyles(theme => ({}));
+const useStyles = makeStyles((theme) => ({}));
 
 export default function Popular() {
   return (
@@ -24,7 +24,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="#eminem" />
+            <ListItemText primary="#trendingtopic" />
           </Button>
         </ListItem>
         <ListItem>
@@ -34,7 +34,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="#postmalone" />
+            <ListItemText primary="#trendingtopic" />
           </Button>
         </ListItem>
         <ListItem>
@@ -44,7 +44,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="#eltonjohn" />
+            <ListItemText primary="#trendingtopic" />
           </Button>
         </ListItem>
         <ListItem>
@@ -54,7 +54,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="#leonrussel" />
+            <ListItemText primary="#trendingtopic" />
           </Button>
         </ListItem>
         <ListItem>
@@ -64,7 +64,7 @@ export default function Popular() {
             component={RouterLink}
             to={`/products/`}
           >
-            <ListItemText primary="#blacksabbath" />
+            <ListItemText primary="#trendingtopic" />
           </Button>
         </ListItem>
       </List>
