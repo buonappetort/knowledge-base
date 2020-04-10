@@ -1,13 +1,21 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+import { Link as RouterLink } from "react-router-dom";
+import {
+  List,
+  ListItemText,
+  ListItem,
+  Divider,
+  Typography,
+  Grid,
+} from "@material-ui/core";
 import ReactMarkdown from "markdown-to-jsx";
 import { withStyles } from "@material-ui/core/styles";
 // import Markdown from "./markdown";
 import Link from "@material-ui/core/Link";
+import { Breadcrumbs } from "@material-ui/core";
 //import post from "./examples/post1.md";
 
 const useStyles = makeStyles((theme) => ({
@@ -55,9 +63,9 @@ const options = {
 
 export default function Main(props) {
   const classes = useStyles();
-  const title = "Article 1";
+  const title = "Example Product";
 
-  const post = `# Sample blog post
+  const post = `# Sample Article
 
   #### April 1, 2020 by [Olivier](/)
   
@@ -105,19 +113,70 @@ export default function Main(props) {
   Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
   `;
 
+  let { component } = useParams();
+
   return (
-    <Grid item xs={12} md={8}>
-      <Typography variant="h6" gutterBottom>
-        {title}
-      </Typography>
-      <Divider />
-      <ReactMarkdown
-        className={classes.markdown}
-        options={options}
-        key={post.substring(0, 40)}
-      >
-        {post}
-      </ReactMarkdown>
-    </Grid>
+    <div>
+      <Grid container>
+        <Grid item xs={12}>
+          <Breadcrumbs color="inherit">
+            <Link>Helix</Link>
+            <Link>I&A</Link>
+            <Link>Mission Center 1</Link>
+            <Link>articles</Link>
+          </Breadcrumbs>
+          <Divider />
+        </Grid>
+      </Grid>
+      <Grid container spacing={9}>
+        <Grid item xs={8}>
+          <ReactMarkdown
+            className={classes.markdown}
+            options={options}
+            key={post.substring(0, 40)}
+          >
+            {post}
+          </ReactMarkdown>
+        </Grid>
+        <Grid item md={4}>
+          <Typography variant="h6">More From this Center</Typography>
+          <List>
+            <ListItem>
+              <RouterLink to="/">Another Product From this Center</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">How about another From this center</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">This is also from the same center</RouterLink>
+            </ListItem>
+          </List>
+          <Typography variant="h6">More From this Author</Typography>
+          <List>
+            <ListItem>
+              <RouterLink to="/">Another Product From this Author</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">How about another From this Author</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">This is also from the same Author</RouterLink>
+            </ListItem>
+          </List>
+          <Typography variant="h6">More From this Topic</Typography>
+          <List>
+            <ListItem>
+              <RouterLink to="/">Another Product From this Topic</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">How about another From this Topic</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">This is also from the same Topic</RouterLink>
+            </ListItem>
+          </List>
+        </Grid>
+      </Grid>
+    </div>
   );
 }

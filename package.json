@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
     "markdown-to-jsx": "^6.11.0",
+    "material-table": "^1.57.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-material-ui-carousel": "^1.1.1",
